@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Inmobiliaria</title>
+    <link rel="stylesheet" href="/src/html/paginaCalcularEscritura/css/style.css">
+    <link rel="stylesheet" href="/src/css/common.css">
+</head>
+<body class="bg-body">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <img src="/src/img/99008818_2877661309014214_8984566666876682240_n.png" alt="logo" width="100px">
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/index.html">Inicio<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/src/html/paginaCalcularEscritura/calcularEscritura.html">Calculo de escritura</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Operaciones</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="#">Venta</a>
+                            <a class="dropdown-item" href="#">Alquiler</a>
+                            <a class="dropdown-item" href="#">Compra</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Calcula aproximadamente el costo de la escritura.</h1>
+        <div class="row">
+            <div class="bg-success col-md-4 rounded ">
+                <h3>Calcula el costo de tu escritura</h3>
+                <div>
+                    <div class="form-group">
+                        <label>PRECIO DEL INMUEBLE EN DOLARES</label>
+                        <input class="form-control" type="number" lang="es" name="valorPropiedad" id="valorPropiedad" placeholder="valor de la propiedad U$S">
+                    </div>
+                    <div class="form-group">
+                        <label>VIVIENDA UNICA DEL COMPRADOR DESTINO VIVIENDA</label>
+                        <select class="custom-select mr-sm-2" id="viviendaUnica">
+                            <option value=false>No</option>
+                            <option value=true>Si</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>TRAMITA VENDEDOR CERTIFICADO NO RETENCIÓN ITI</label>
+                        <select class="custom-select mr-sm-2" id="iti">
+                            <option value=false>No</option>
+                            <option value=true>Si</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>PRIMERA ESCRITURA?</label>
+                        <select class="custom-select mr-sm-2" id="primeraEscritura">
+                            <option value=false>No</option>
+                            <option value=true>Si</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>COTIZACIÓN DEL DOLAR BLUE</label>
+                        <input class="form-control" type="number" lang="es" name="dolar" id="cotizacionDolar" placeholder="cotización del dolar">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-danger" id="calcular">calcular</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-danger col-md-4 rounded ">
+                <h3>Gastos parte Vendedora</h3>
+                <br>
+                <p>ITI (1,5%)</p>
+                <div class="text-right"><b id="resultadoIti">$00.00</b></div>
+                <p>Sellos (1,8%)</p>
+                <div class="text-right"><b id="resultadoSellosVendedor">$00.00</b></div>
+                <p>Gastos de Escrituracion</p>
+                <div class="text-right"><b id="resultadosEscrituracion">$00.00</b></div>
+                <br>
+                <br>
+                <p>Total en dolares</p>
+                <div class="text-right"><b id="totalDolaresVendedor">$00.00</b></div>
+                <p>Total en pesos</p>
+                <div class="text-right"><b id="totalPesosVendedor">$00.00</b></div>
+            </div>
+            <div class="bg-info col-md-4 rounded ">
+                <h3>Gastos parte Compradora</h3>
+                <br>
+                <p>Sellos (1,8%)</p>
+                <div class="text-right"><b id="resultadoSellosComprador">$00.00</b></div>
+                <p>Honorarios Escribano</p>
+                <div class="text-right"><b id="resultadoHonorarioEscribano">$00.00</b></div>
+                <p>Gastos de Escrituracion</p>
+                <div class="text-right"><b id="resultadoGastosEscrituracionComprador">$00.00</b></div>
+                <br>
+                <br>
+                <p>Total en dolares</p>
+                <div class="text-right"><b id="totalDolaresComprador">$00.00</b></div>
+                <p>Total en pesos</p>
+                <div class="text-right"><b id="totalPesosComprador">$00.00</b></div>
+            </div>
+        </div>
+    </div>
+    <script src="/src/html/paginaCalcularEscritura/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

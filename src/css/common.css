@@ -1,0 +1,10 @@
+:root{
+    --bg--color--nav: #becad1;
+    --bg--color--body: #8f9da4;
+}
+.navbar {
+    background-color: var(--bg--color--nav);
+}
+.bg-body{
+    background-color: var(--bg--color--body);
+}
