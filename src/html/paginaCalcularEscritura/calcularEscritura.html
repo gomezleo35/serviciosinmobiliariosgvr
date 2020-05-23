@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Inmobiliaria</title>
+    <title>Inmobiliaria GVR</title>
     <link rel="stylesheet" href="/src/html/paginaCalcularEscritura/css/style.css">
     <link rel="stylesheet" href="/src/css/common.css">
+    <link rel="icon" href="/src/img/99008818_2877661309014214_8984566666876682240_n.png" type="image/x-icon">
 </head>
 <body class="bg-body">
     <header>
@@ -39,81 +40,168 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <h1>Calcula aproximadamente el costo de la escritura.</h1>
+    <div class="container mt-4 mb-5">
+        <h1 class="text-center mb-3">Calcula aproximadamente el costo de la escritura.</h1>
+        <h6 class="text-muted">(*) Los precios que resulten de esta aplicación son estimativos.</h6>
         <div class="row">
-            <div class="bg-success col-md-4 rounded ">
-                <h3>Calcula el costo de tu escritura</h3>
-                <div>
-                    <div class="form-group">
-                        <label>PRECIO DEL INMUEBLE EN DOLARES</label>
-                        <input class="form-control" type="number" lang="es" name="valorPropiedad" id="valorPropiedad" placeholder="valor de la propiedad U$S">
-                    </div>
-                    <div class="form-group">
-                        <label>VIVIENDA UNICA DEL COMPRADOR DESTINO VIVIENDA</label>
-                        <select class="custom-select mr-sm-2" id="viviendaUnica">
-                            <option value=false>No</option>
-                            <option value=true>Si</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>TRAMITA VENDEDOR CERTIFICADO NO RETENCIÓN ITI</label>
-                        <select class="custom-select mr-sm-2" id="iti">
-                            <option value=false>No</option>
-                            <option value=true>Si</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>PRIMERA ESCRITURA?</label>
-                        <select class="custom-select mr-sm-2" id="primeraEscritura">
-                            <option value=false>No</option>
-                            <option value=true>Si</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>COTIZACIÓN DEL DOLAR BLUE</label>
-                        <input class="form-control" type="number" lang="es" name="dolar" id="cotizacionDolar" placeholder="cotización del dolar">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-danger" id="calcular">calcular</button>
+            <div class="col-md-4 px-0 mb-2">
+                <div class="card mx-1 bg-primary text-white">
+                    <div class="text-center card-header"><h3>Calcula el costo de tu escritura</h3></div>
+                    <div class="px-2">
+                        <div class="form-group">
+                            <label>PRECIO DEL INMUEBLE EN DOLARES</label>
+                            <input class="form-control" type="number" lang="es" name="valorPropiedad" id="valorPropiedad" placeholder="valor de la propiedad U$S">
+                        </div>
+                        <div class="form-group">
+                            <label>VIVIENDA UNICA DEL COMPRADOR DESTINO VIVIENDA</label>
+                            <select class="custom-select mr-sm-2" id="viviendaUnica">
+                                <option value=false>No</option>
+                                <option value=true>Si</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>TRAMITA VENDEDOR CERTIFICADO NO RETENCIÓN ITI</label>
+                            <select class="custom-select mr-sm-2" id="iti">
+                                <option value=false>No</option>
+                                <option value=true>Si</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>PRIMERA ESCRITURA?</label>
+                            <select class="custom-select mr-sm-2" id="primeraEscritura">
+                                <option value=false>No</option>
+                                <option value=true>Si</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>COTIZACIÓN DEL DOLAR</label>
+                            <input class="form-control" type="number" lang="es" name="dolar" id="cotizacionDolar" placeholder="U$S">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success" id="calcular">calcular</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="bg-danger col-md-4 rounded ">
-                <h3>Gastos parte Vendedora</h3>
-                <br>
-                <p>ITI (1,5%)</p>
-                <div class="text-right"><b id="resultadoIti">$00.00</b></div>
-                <p>Sellos (1,8%)</p>
-                <div class="text-right"><b id="resultadoSellosVendedor">$00.00</b></div>
-                <p>Gastos de Escrituracion</p>
-                <div class="text-right"><b id="resultadosEscrituracion">$00.00</b></div>
-                <br>
-                <br>
-                <p>Total en dolares</p>
-                <div class="text-right"><b id="totalDolaresVendedor">$00.00</b></div>
-                <p>Total en pesos</p>
-                <div class="text-right"><b id="totalPesosVendedor">$00.00</b></div>
+            <div class="col-md-4 px-0 mb-2">
+                <div class="card mx-1 bg-primary text-white" style="height: 100%;">
+                    <div class="text-center card-header"><h3>Gastos para la parte vendedora</h3></div>
+                    <div class="px-2">
+                        <p>ITI (1,5%)</p>
+                        <div class="text-right"><b id="resultadoIti">U$S 0.00</b></div>
+                        <p>Sellos (1,8%)</p>
+                        <div class="text-right"><b id="resultadoSellosVendedor">U$S 0.00</b></div>
+                        <p>Gastos de Escrituracion</p>
+                        <div class="text-right"><b id="resultadosEscrituracion">U$S 0.00</b></div>
+                        <br>
+                        <br>
+                        <p>Total en dolares</p>
+                        <div class="text-right"><b id="totalDolaresVendedor">U$S 0.00</b></div>
+                        <p>Total en pesos</p>
+                        <div class="text-right"><b id="totalPesosVendedor">$ 0.00</b></div>
+                    </div>
+                </div>
             </div>
-            <div class="bg-info col-md-4 rounded ">
-                <h3>Gastos parte Compradora</h3>
-                <br>
-                <p>Sellos (1,8%)</p>
-                <div class="text-right"><b id="resultadoSellosComprador">$00.00</b></div>
-                <p>Honorarios Escribano</p>
-                <div class="text-right"><b id="resultadoHonorarioEscribano">$00.00</b></div>
-                <p>Gastos de Escrituracion</p>
-                <div class="text-right"><b id="resultadoGastosEscrituracionComprador">$00.00</b></div>
-                <br>
-                <br>
-                <p>Total en dolares</p>
-                <div class="text-right"><b id="totalDolaresComprador">$00.00</b></div>
-                <p>Total en pesos</p>
-                <div class="text-right"><b id="totalPesosComprador">$00.00</b></div>
+            <div class="col-md-4 px-0 mb-2">
+                <div class="card mx-1 bg-primary text-white" style="height: 100%;">
+                    <div class="text-center card-header"><h3>Gastos para la parte compradora</h3></div>
+                    <div class="px-2">
+                        <p>Sellos (1,8%)</p>
+                        <div class="text-right"><b id="resultadoSellosComprador">U$S 0.00</b></div>
+                        <p>Honorarios Escribano</p>
+                        <div class="text-right"><b id="resultadoHonorarioEscribano">U$S 0.00</b></div>
+                        <p>Gastos de Escrituracion</p>
+                        <div class="text-right"><b id="resultadoGastosEscrituracionComprador">U$S 0.00</b></div>
+                        <br>
+                        <br>
+                        <p>Total en dolares</p>
+                        <div class="text-right"><b id="totalDolaresComprador">U$S 0.00</b></div>
+                        <p>Total en pesos</p>
+                        <div class="text-right"><b id="totalPesosComprador">$ 0.00</b></div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="my-3">
+            <h3>Consideraciones generales:</h3>
+            <p>La herramienta que ponemos a disposición intenta únicamente brindarle una aproximación de los gastos
+            de escrituración e impositivos asociados a la compraventa de inmuebles. Se trata de una 
+            aproximación dado que los costos reales dependeran del tipo de cambio del día anterior a la escritura 
+            y de los honorarios de los escribanos que pueden variar según explicamos más adelante.</p>
+        </div>
+        <div class="my-3">
+            <h3>Gastos de la parte vendedora</h3>
+            <li>Sellos: Este impuesto es 3,6% sobre el valor de escrituración, el cual se abona, por uso y costumbre
+            en partes iguales por el vendedor y el comprador. Si para el comprador es único inmueble con destino 
+            vivienda en CABA abona cada parte el 1,8% sobre el excedente del valor del inmueble.</li>
+            <li>ITI: las personas físicas deben abonar el Impuesto a la Transferencia de Inmuebles (ITI) 
+            que representa un 1,5% sobre el valor de escrituración, salvo que se trate de un vendedor con 
+            una única propiedad con destino vivienda y se comprometa a realizar un reemplazada dentro del año. 
+            En dicho caso deberá tramitar el certificado de no retención en AFIP. Las personas jurídicas deben 
+            abonar en el caso de la venta de un inmueble impuesto a las Ganancias. En ese caso el Escribano retiene 
+            un 3% que puede ser utilizado a cuenta del Impuesto a las Ganancias que pague la sociedad por esta venta. 
+            En este caso podrá eximirse del pago de tratarse de Reemplazo de bien de uso (con certificado de Contador 
+            Público).</li>
+            <li>Otros gastos de escrituración a abonar son: Aporte Notarial, Estudio de títulos, Certificados varios 
+            (Libre deuda de Servicios y expensas, etc), Gastos de diligenciamiento, Formularios UIF/AFIP, entre otros. 
+            Estos gastos pueden sumar entre 0,6% y 1,5% sobre el valor de escrituración dependiendo del valor del 
+            inmueble, en propiedades de valores altos este valor puede ser menor asi como en propiedades de menor 
+            valor aumentar su incidencia debido principalmente a que alguno de los conceptos representan valores 
+            proporcionales y en muchos casos son valores fijos</li>
+            <li>Honorarios de la inmobiliaria.</li>
+        </div>
+        <div class="mb-3">
+            <h3>Gastos de la parte compradora</h3>
+            <li>Sellos: Este impuesto es 3,6% sobre el valor de escrituración, el cual se abona, por uso y costumbre 
+            en partes iguales por el vendedor y el comprador. Si para el comprador es único inmueble abona cada parte el 1,8% 
+            sobre el excedente del valor del inmueble.</li>
+            <li>Honorarios de Escribano. Estos gastos pueden sumar entre 1% y 2% sobre el valor de escrituración. 
+            En el caso de unidades nuevas con primera escritura deberá agregarse los honorarios por el reglamento 
+            de copropiedad (0,5% adicionales).</li>
+            <li>Otros gastos de escrituración a abonar son: Aporte Notarial, Inscripción al registro de la propiedad, 
+            Gastos de diligenciamiento, entre otros. Suman 0,5% aproximadamente.</li>
+            <li>Honorarios de la inmobiliaria: 3% sobre el valor del inmueble.</li>
+        </div>
     </div>
+    <footer>
+        <div class="bg-dark text-white  displayFooter" style="height: auto;" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 my-2">
+                        <h5>Servicios inmobiliarios GVR</h5>
+                        <p class="text-muted">"Venta y alquiler de Propiedades · Tasaciones de Propiedades ."</p>
+                        <div class="displayFooter">
+                            <div class="rounded-circle divRedes"><a class="linkRedes" href="https://www.facebook.com/gvrinmobiliaria/"><i class="fab fa-facebook-f"></i></a></div>
+                            <div class="rounded-circle divRedes"><a class="linkRedes" href="https://instagram.com/gvr.servicios.inmobiliarios?igshid=1gxckdir776h7"><i class="fab fa-instagram"></i></a></div>
+                            <div class="rounded-circle divRedes"><a class="linkRedes" href="https://api.whatsapp.com/send?phone=5493513643917"><i class="fab fa-whatsapp"></i></a></div>
+                            <div class="rounded-circle divRedes"><a class="linkRedes" href="mailto: gomezleo35@gmail.com"><i class="far fa-envelope"></i></a></div>
+                        </div>
+
+                    </div>  
+                    <div class="col-md-6 my-2">
+                        <h5>Contáctenos</h5>
+                        <br>
+                        <div>Cleveland 5592. Barrio Santa Isabel segunda sección. Córdoba. Argentina.
+                            Tel: +54 9 351 3643917
+                            Tel: +54 9 351 2500514
+                            <br>
+                            <i class="far fa-envelope"></i><a href="mailto: gomezleo35@gmail.com"> inmobiliaria@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subFooter  displayFooter">
+            <div class="container">
+                <div class="row">
+                    <div class="text-white col-md-8 my-2">© 2020 Inmobiliaria GVR - Matriculado responsable Gómez Emmanuel Emilio Matrícula 5795</div>
+                    <div class="text-warning col-md-4 my-2">Sitio diseñado y creado por Gómez Leonardo</div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="/src/html/paginaCalcularEscritura/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/f01eea33cd.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

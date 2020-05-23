@@ -1,10 +1,33 @@
 :root{
     --bg--color--nav: #becad1;
-    --bg--color--body: #8f9da4;
+    --bg--color--body: #f5fffa;
 }
 .navbar {
     background-color: var(--bg--color--nav);
 }
 .bg-body{
     background-color: var(--bg--color--body);
+}
+.text-white{
+    color: var(--bg--color--body);
+}
+.displayFooter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.linkRedes{
+    color: white;
+    font-size: 22px;
+}
+.divRedes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    width: 50px;
+    height: 50px;
+}
+.subFooter{
+    background-color: #2d3338;
 }
