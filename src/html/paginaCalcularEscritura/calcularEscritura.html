@@ -11,27 +11,31 @@
 </head>
 <body class="bg-body">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-light">
+        <nav class="navbar navbar-expand-sm navbar-light mr-auto">
             <img src="/src/img/99008818_2877661309014214_8984566666876682240_n.png" alt="logo" width="100px">
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <div class="collapse navbar-collapse " id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
                     <li class="nav-item active">
                         <a class="nav-link" href="/index.html">Inicio<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="">Ventas</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="">Alquiler</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="">Tasaciones</a>
+                    </li>
+                    <li>
                         <a class="nav-link" href="/src/html/paginaCalcularEscritura/calcularEscritura.html">Calculo de escritura</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Operaciones</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="#">Venta</a>
-                            <a class="dropdown-item" href="#">Alquiler</a>
-                            <a class="dropdown-item" href="#">Compra</a>
-                        </div>
+                    <li>
+                        <a class="nav-link" href="">Nosotros</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contacto</a>
@@ -124,17 +128,17 @@
         </div>
         <div class="my-3">
             <h3>Consideraciones generales:</h3>
-            <p>La herramienta que ponemos a disposición intenta únicamente brindarle una aproximación de los gastos
+            <p class="text-justify">La herramienta que ponemos a disposición intenta únicamente brindarle una aproximación de los gastos
             de escrituración e impositivos asociados a la compraventa de inmuebles. Se trata de una 
             aproximación dado que los costos reales dependeran del tipo de cambio del día anterior a la escritura 
             y de los honorarios de los escribanos que pueden variar según explicamos más adelante.</p>
         </div>
         <div class="my-3">
             <h3>Gastos de la parte vendedora</h3>
-            <li>Sellos: Este impuesto es 3,6% sobre el valor de escrituración, el cual se abona, por uso y costumbre
+            <li class="text-justify">Sellos: Este impuesto es 3,6% sobre el valor de escrituración, el cual se abona, por uso y costumbre
             en partes iguales por el vendedor y el comprador. Si para el comprador es único inmueble con destino 
             vivienda en CABA abona cada parte el 1,8% sobre el excedente del valor del inmueble.</li>
-            <li>ITI: las personas físicas deben abonar el Impuesto a la Transferencia de Inmuebles (ITI) 
+            <li class="text-justify">ITI: las personas físicas deben abonar el Impuesto a la Transferencia de Inmuebles (ITI) 
             que representa un 1,5% sobre el valor de escrituración, salvo que se trate de un vendedor con 
             una única propiedad con destino vivienda y se comprometa a realizar un reemplazada dentro del año. 
             En dicho caso deberá tramitar el certificado de no retención en AFIP. Las personas jurídicas deben 
@@ -142,25 +146,25 @@
             un 3% que puede ser utilizado a cuenta del Impuesto a las Ganancias que pague la sociedad por esta venta. 
             En este caso podrá eximirse del pago de tratarse de Reemplazo de bien de uso (con certificado de Contador 
             Público).</li>
-            <li>Otros gastos de escrituración a abonar son: Aporte Notarial, Estudio de títulos, Certificados varios 
+            <li class="text-justify">Otros gastos de escrituración a abonar son: Aporte Notarial, Estudio de títulos, Certificados varios 
             (Libre deuda de Servicios y expensas, etc), Gastos de diligenciamiento, Formularios UIF/AFIP, entre otros. 
             Estos gastos pueden sumar entre 0,6% y 1,5% sobre el valor de escrituración dependiendo del valor del 
             inmueble, en propiedades de valores altos este valor puede ser menor asi como en propiedades de menor 
             valor aumentar su incidencia debido principalmente a que alguno de los conceptos representan valores 
             proporcionales y en muchos casos son valores fijos</li>
-            <li>Honorarios de la inmobiliaria.</li>
+            <li class="text-justify">Honorarios de la inmobiliaria.</li>
         </div>
         <div class="mb-3">
             <h3>Gastos de la parte compradora</h3>
-            <li>Sellos: Este impuesto es 3,6% sobre el valor de escrituración, el cual se abona, por uso y costumbre 
+            <li class="text-justify">Sellos: Este impuesto es 3,6% sobre el valor de escrituración, el cual se abona, por uso y costumbre 
             en partes iguales por el vendedor y el comprador. Si para el comprador es único inmueble abona cada parte el 1,8% 
             sobre el excedente del valor del inmueble.</li>
-            <li>Honorarios de Escribano. Estos gastos pueden sumar entre 1% y 2% sobre el valor de escrituración. 
+            <li class="text-justify">Honorarios de Escribano. Estos gastos pueden sumar entre 1% y 2% sobre el valor de escrituración. 
             En el caso de unidades nuevas con primera escritura deberá agregarse los honorarios por el reglamento 
             de copropiedad (0,5% adicionales).</li>
-            <li>Otros gastos de escrituración a abonar son: Aporte Notarial, Inscripción al registro de la propiedad, 
+            <li class="text-justify">Otros gastos de escrituración a abonar son: Aporte Notarial, Inscripción al registro de la propiedad, 
             Gastos de diligenciamiento, entre otros. Suman 0,5% aproximadamente.</li>
-            <li>Honorarios de la inmobiliaria: 3% sobre el valor del inmueble.</li>
+            <li class="text-justify">Honorarios de la inmobiliaria: 3% sobre el valor del inmueble.</li>
         </div>
     </div>
     <footer>
@@ -169,23 +173,22 @@
                 <div class="row">
                     <div class="col-md-6 my-2">
                         <h5>Servicios inmobiliarios GVR</h5>
-                        <p class="text-muted">"Venta y alquiler de Propiedades · Tasaciones de Propiedades ."</p>
+                        <p class="text-muted">"Venta · Alquiler · Administración · Tasación de Propiedades ."</p>
                         <div class="displayFooter">
-                            <div class="rounded-circle divRedes"><a class="linkRedes" href="https://www.facebook.com/gvrinmobiliaria/"><i class="fab fa-facebook-f"></i></a></div>
-                            <div class="rounded-circle divRedes"><a class="linkRedes" href="https://instagram.com/gvr.servicios.inmobiliarios?igshid=1gxckdir776h7"><i class="fab fa-instagram"></i></a></div>
-                            <div class="rounded-circle divRedes"><a class="linkRedes" href="https://api.whatsapp.com/send?phone=5493513643917"><i class="fab fa-whatsapp"></i></a></div>
-                            <div class="rounded-circle divRedes"><a class="linkRedes" href="mailto: gomezleo35@gmail.com"><i class="far fa-envelope"></i></a></div>
+                            <a class="linkRedes" href="https://www.facebook.com/gvrinmobiliaria/"><div class="rounded-circle divRedes"><i class="fab fa-facebook-f"></i></div></a>
+                            <a class="linkRedes" href="https://instagram.com/gvr.servicios.inmobiliarios?igshid=1gxckdir776h7"><div class="rounded-circle divRedes"><i class="fab fa-instagram"></i></div></a>
+                            <a class="linkRedes" href="https://api.whatsapp.com/send?phone=5493513643917"><div class="rounded-circle divRedes"><i class="fab fa-whatsapp"></i></div></a>
+                            <a class="linkRedes" href="mailto: gvrinmobiliaria@gmail.com"><div class="rounded-circle divRedes"><i class="far fa-envelope"></i></div></a>
                         </div>
 
                     </div>  
                     <div class="col-md-6 my-2">
                         <h5>Contáctenos</h5>
-                        <br>
-                        <div>Cleveland 5592. Barrio Santa Isabel segunda sección. Córdoba. Argentina.
-                            Tel: +54 9 351 3643917
+                        <div>24 de Septiembre. Barrio General Paz. Córdoba. Argentina. <br>
+                            Tel: +54 9 351 3643917 <br>
                             Tel: +54 9 351 2500514
                             <br>
-                            <i class="far fa-envelope"></i><a href="mailto: gomezleo35@gmail.com"> inmobiliaria@gmail.com</a>
+                            <i class="far fa-envelope"></i><a href="mailto: gvrinmobiliaria@gmail.com"> gvrinmobiliaria@gmail.com</a>
                         </div>
                     </div>
                 </div>
@@ -194,7 +197,7 @@
         <div class="subFooter  displayFooter">
             <div class="container">
                 <div class="row">
-                    <div class="text-white col-md-8 my-2">© 2020 Inmobiliaria GVR - Matriculado responsable Gómez Emmanuel Emilio Matrícula 5795</div>
+                    <div class="text-white col-md-8 my-2">© 2020 Inmobiliaria GVR - Matriculado responsable Gómez Emmanuel Emilio CPI 5795</div>
                     <div class="text-warning col-md-4 my-2">Sitio diseñado y creado por Gómez Leonardo</div>
                 </div>
             </div>

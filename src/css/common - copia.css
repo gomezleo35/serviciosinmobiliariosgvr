@@ -19,11 +19,6 @@
 .linkRedes{
     color: white;
     font-size: 22px;
-    text-decoration: none;
-}
-.linkRedes:hover{
-    color: darkslateblue;
-    text-decoration: none;
 }
 .divRedes{
     display: flex;
@@ -47,14 +42,4 @@
 .a-card:hover{
     text-decoration: none !important;
     color: black !important;
-}
-.bg-gris{
-    background-color: darkgrey;
-}
-.fixed{
-    position: fixed;
-    margin-bottom: 200px;
-}
-.sombra{
-    box-shadow: 0 10px 20px rgba(0,0,0,0.50), 0 6px 6px rgba(0,0,0,0.53);
 }
